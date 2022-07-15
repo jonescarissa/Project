@@ -1,0 +1,125 @@
+@import url("https://use.typekit.net/yyu0zgb.css"
+
+);
+
+* { 
+font-family: futura-pt-bold, sans-serif;
+letter-spacing: 4px;
+font-style: normal;
+
+
+}
+
+.container {
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+align-items: center;
+text-align: center;
+min-height: 100vh;
+
+}
+
+.btn-1 {
+width: 300px;
+height: 100px;
+border: none;
+color: black;
+background-color: #E7A20E;
+border-radius: 4px;
+box-shadow: inset 0 0 0 0 #ffffff;
+transition: ease-out 0.3s;
+font-size: 2rem;
+outline: none;
+cursor: url(cursors/hive-cursor.cur)
+
+}
+
+.btn-1:hover {
+box-shadow: inset 300px 0 0 0 #ffffff ;
+cursor: url(cursors/hive-cursor.cur);
+color: #4E5454
+}
+
+body {
+font-family: Arial, Helvetica, sans-serif;
+margin: 0;
+background-color: #4e5454;
+}
+
+.topleft {
+position: absolute;
+top: 8px;
+left: 16px;
+}
+
+.btn-2 {
+width: 150px;
+height: 55px;
+border: none;
+color: black;
+background-color: #E7A20E;
+border-radius: 4px;
+box-shadow: inset 0 0 0 0 #ffffff;
+transition: ease-out 0.3s;
+font-size: 20px;
+outline: none;
+position: absolute;
+top: 8px;
+right: 16px;
+cursor: url(cursors/hive-cursor.cur);
+}
+
+.btn-2:hover {
+box-shadow: inset 150px 0 0 0 crimson;
+cursor: url(cursors/hive-cursor.cur);
+color: white
+}
+
+.btn-3 {
+width: 150px;
+height: 55px;
+border: none;
+color: black;
+background-color: #E7A20E;
+border-radius: 4px;
+box-shadow: inset 0 0 0 0 #ffffff;
+transition: ease-out 0.3s;
+font-size: 20px;
+outline: none;
+position: absolute;
+top: 8px;
+right: 175px;
+cursor: url(cursors/hive-cursor.cur);
+}
+
+.btn-3:hover {
+box-shadow: inset 150px 0 0 0 white;
+cursor: url(cursors/hive-cursor.cur);
+color: #4e5454;
+}
+
+.header {
+padding: 60px;
+text-align: center;
+background-image: url("add-assets/hive_background.jpg");
+color: white;
+font-size: 30px;
+border-bottom: 55px solid #e7a20e
+}
+.topleft:hover {
+opacity: 0.5;
+}
+
+.bottomright {
+position: absolute;
+bottom: 8px;
+right: 16px;
+opacity: 50%;
+}
+
+.center {
+position: absolute;
+top: 335px;
+left: 475px;
+}
