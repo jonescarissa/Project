@@ -20,17 +20,17 @@ document.getElementById("close_card_box").addEventListener("click", () => {
 
 flashcardMaker = (text, delThisIndex) => {
   const flashcard = document.createElement("div");
-  const question = document.createElement('h2');
-  const answer = document.createElement('h2');
+  const term = document.createElement('h2');
+  const definition = document.createElement('h2');
   const del = document.createElement('i');
 
   flashcard.className = 'flashcard';
 
-  question.setAttribute("style", "border-top:1px solid red; padding: 15px; margin-top:30px");
-  question.textContent = text.my_question;
+  term.setAttribute("style", "border-top:1px solid red; padding: 15px; margin-top:30px");
+  term.textContent = text.my_term;
 
-  answer.setAttribute("style", "text-align:center; display:none; color:red");
-  answer.textContent = text.my_answer;
+  definition.setAttribute("style", "text-align:center; display:none; color:red");
+  definition.textContent = text.my_definition;
 
   del.className = "fas fa-minus";
   del.addEventListener("click", () => {
@@ -39,15 +39,15 @@ flashcardMaker = (text, delThisIndex) => {
     window.location.reload();
   })
 
-  flashcard.appendChild(question);
-  flashcard.appendChild(answer);
+  flashcard.appendChild(term);
+  flashcard.appendChild(definition);
   flashcard.appendChild(del);
 
   flashcard.addEventListener("click", () => {
-    if(answer.style.display == "none")
-      answer.style.display = "block";
+    if(definition.style.display == "none")
+      definition.style.display = "block";
     else
-      answer.style.display = "none";
+      definition.style.display = "none";
   })
 
   document.querySelector("#flashcards").appendChild(flashcard);
@@ -56,17 +56,17 @@ flashcardMaker = (text, delThisIndex) => {
 contentArray.forEach(flashcardMaker);
 
 addFlashcard = () => {
-  const question = document.querySelector("#question");
-  const answer = document.querySelector("#answer");
+  const term = document.querySelector("#term");
+  const definition = document.querySelector("#definition");
 
   let flashcard_info = {
-    'my_question' : question.value,
-    'my_answer'  : answer.value
+    'my_term' : term.value,
+    'my_definition'  : definition.value
   }
 
   contentArray.push(flashcard_info);
   localStorage.setItem('items', JSON.stringify(contentArray));
   flashcardMaker(contentArray[contentArray.length - 1], contentArray.length - 1);
-  question.value = "";
-  answer.value = "";
+  term.value = "";
+  definition.value = "";
 }
