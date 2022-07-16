@@ -10,6 +10,12 @@ font-style: normal;
 
 }
 
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: #000;
+}
+
 .container {
 display: flex;
 flex-direction: row;
@@ -20,106 +26,89 @@ min-height: 100vh;
 
 }
 
-.btn-1 {
-width: 300px;
-height: 100px;
-border: none;
-color: black;
-background-color: #E7A20E;
-border-radius: 4px;
-box-shadow: inset 0 0 0 0 #ffffff;
-transition: ease-out 0.3s;
-font-size: 2rem;
-outline: none;
-cursor: url(cursors/hive-cursor.cur)
-
+a {
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #2196f3;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 24px;
+    overflow: hidden;
+    transition: 0.2s;
 }
 
-.btn-1:hover {
-box-shadow: inset 300px 0 0 0 #ffffff ;
-cursor: url(cursors/hive-cursor.cur);
-color: #4E5454
+a:hover {
+    color: #255784;
+    background: #2196f3;
+    box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+    transition-delay: 1s;
 }
 
-body {
-font-family: Arial, Helvetica, sans-serif;
-margin: 0;
-background-color: #4e5454;
+a span {
+    position: absolute;
+    display: block;
 }
 
-.topleft {
-position: absolute;
-top: 8px;
-left: 16px;
+a span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #2196f3);
 }
 
-.btn-2 {
-width: 150px;
-height: 55px;
-border: none;
-color: black;
-background-color: #E7A20E;
-border-radius: 4px;
-box-shadow: inset 0 0 0 0 #ffffff;
-transition: ease-out 0.3s;
-font-size: 20px;
-outline: none;
-position: absolute;
-top: 8px;
-right: 16px;
-cursor: url(cursors/hive-cursor.cur);
+a:hover span:nth-child(1) {
+    left: 100%;
+    transition: 1s;
 }
 
-.btn-2:hover {
-box-shadow: inset 150px 0 0 0 crimson;
-cursor: url(cursors/hive-cursor.cur);
-color: white
+a span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #2196f3);
 }
 
-.btn-3 {
-width: 150px;
-height: 55px;
-border: none;
-color: black;
-background-color: #E7A20E;
-border-radius: 4px;
-box-shadow: inset 0 0 0 0 #ffffff;
-transition: ease-out 0.3s;
-font-size: 20px;
-outline: none;
-position: absolute;
-top: 8px;
-right: 175px;
-cursor: url(cursors/hive-cursor.cur);
+a:hover span:nth-child(3) {
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
 }
 
-.btn-3:hover {
-box-shadow: inset 150px 0 0 0 white;
-cursor: url(cursors/hive-cursor.cur);
-color: #4e5454;
+a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #2196f3);
+}
+
+a:hover span:nth-child(2) {
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+
+a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #2196f3);
+}
+
+a:hover span:nth-child(4) {
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
 }
 
 .header {
-padding: 60px;
-text-align: center;
-background-image: url("add-assets/hive_background.jpg");
-color: white;
-font-size: 30px;
-border-bottom: 55px solid #e7a20e
-}
-.topleft:hover {
-opacity: 0.5;
+    padding: 65px;
+    text-align: center;
+    color:#2196f3;
 }
 
-.bottomright {
-position: absolute;
-bottom: 8px;
-right: 16px;
-opacity: 50%;
-}
-
-.center {
-position: absolute;
-top: 335px;
-left: 475px;
-}
